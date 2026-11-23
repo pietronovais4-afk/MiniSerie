@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>DRAMIX — Streaming de Minisséries Verticais</title>
+  
+  <!-- Tailwind CSS Engine oficial Antigravity -->
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap');
+    
+    :root {
+      color-scheme: dark;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background-color: #060810;
+      color: #f3f4f6;
+    }
+
+    /* Ocultar scrollbar mantendo funcionalidade */
+    .scrollbar-none::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-none {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .line-clamp-1 {
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .line-clamp-3 {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Suavidade nos botões e cards */
+    .active\:scale-98:active {
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-[#060810] text-[#f3f4f6] selection:bg-violet-600 selection:text-white antialiased flex flex-col justify-between">
+
+  <!-- Header Superior Fixo com Blur Estilo VibeShort -->
+  <header id="dramix-header" class="sticky top-0 z-40 w-full bg-[#060810]/95 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/60 transition-all">
+    <!-- Renderizado dinamicamente pelo app.js -->
+  </header>
+
+  <!-- Container de Conteúdo Principal (com padding inferior para acomodar a barra de navegação) -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 pt-4 pb-24">
+    <div id="dramix-main-content">
+      <!-- As visualizações (Descobrir, Shorts, Prêmio, Minha Lista, Perfil, Detalhes, Loja) serão renderizadas aqui -->
+    </div>
+  </main>
+
+  <!-- Barra de Navegação Inferior Fixa com 5 Opções (Descobrir, Shorts, Prêmio, Minha Lista, Perfil) -->
+  <nav id="dramix-bottom-nav">
+    <!-- Renderizado dinamicamente pelo app.js -->
+  </nav>
+
+  <!-- Rodapé Minimalista Profissional -->
+  <footer class="w-full bg-[#04050A] border-t border-white/10 py-10 mt-12 mb-16 hidden md:block">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <div class="flex items-center gap-3">
+        <span class="w-8 h-8 rounded-xl bg-gradient-to-tr from-violet-600 via-purple-600 to-fuchsia-600 flex items-center justify-center font-black text-white text-base shadow-md shadow-violet-600/30">D</span>
+        <div>
+          <span class="text-base font-black tracking-wider text-white">DRAMIX</span>
+          <p class="text-[11px] text-gray-400">Plataforma Oficial de Streaming de Minisséries Verticais</p>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-gray-400 font-semibold">
+        <span>Catálogo Cinematográfico</span>
+        <span>5 Episódios Grátis por Produção</span>
+        <span>Recompensa Diária de Moedas</span>
+        <span>DRAMIX Passe VIP Sem Limites</span>
+        <span>Ambiente Seguro</span>
+      </div>
+
+      <div class="text-xs text-gray-500 text-center md:text-right">
+        &copy; 2026 DRAMIX Entertainment Inc. Todos os direitos reservados.
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts Modulares da Arquitetura DRAMIX -->
+  <script src="data/local-store.js"></script>
+  <script src="db/database.js"></script>
+  <script src="api/backend-service.js"></script>
+  <script src="components/player.js"></script>
+  <script src="components/checkin-modal.js"></script>
+  <script src="components/locked-episode-modal.js"></script>
+  <script src="components/pass-modal.js"></script>
+  <script src="components/rewarded-ad-modal.js"></script>
+  <script src="components/checkout-modal.js"></script>
+  <script src="views/discover.js"></script>
+  <script src="views/shorts.js"></script>
+  <script src="views/rewards.js"></script>
+  <script src="views/favorites.js"></script>
+  <script src="views/profile.js"></script>
+  <script src="views/coin-store.js"></script>
+  <script src="views/series-details.js"></script>
+  <script src="views/home.js"></script>
+  <script src="views/subscription.js"></script>
+  <script src="views/owner-panel.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
